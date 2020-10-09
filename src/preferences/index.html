@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="../styled.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="group">
+            <label for="">Destination path:</label>
+            <input id="dest-path" name="dest-path" type="text">
+            <button onclick="choose()">Choose</button>
+        </div>
+
+
+    </div>
+
+    <script>
+        const {ipcRenderer} = require('electron')
+
+        const destPath = document.querySelector('#dest-path')
+
+        iprRenderer.on("dest-path-update", (event, destination) =>{
+            destPath.value = destination
+        })
+
+        function choose(){
+            ipcRenderer.invoke('show-dialog').then(destination =>{
+                destPath.value = destination
+            })
+
+
+        }
+
+    </script>
+    
+</body>
+</html>
