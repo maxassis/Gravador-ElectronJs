@@ -11,7 +11,7 @@
 
 
 
-## Download
+## Download Windows
 
 Instalador e executavel(rar)
 
