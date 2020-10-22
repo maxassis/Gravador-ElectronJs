@@ -1,6 +1,6 @@
 # Max Recorder - ElectronJs
 
- Gravador de audio feito com ElectronJs
+ Gravador de audio para Windows feito com ElectronJs
 
 
 
